@@ -1,0 +1,39 @@
+﻿@model IEnumerable<NHP_Ontap.Models.MonHoc>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("NhpCreate New", "NhpCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenMH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sotiet)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenMH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sotiet)
+        </td>
+        <td>
+            @Html.ActionLink("NhpEdit", "NhpEdit", new { id=item.MaMH.Trim() }) |
+            @Html.ActionLink("NhpDetails", "NhpDetails", new { id=item.MaMH.Trim() }) |
+            @Html.ActionLink("NhpDelete", "NhpDelete", new { id=item.MaMH.Trim() })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<NHP_Ontap.Models.Ketqua>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("NhpCreate New", "NhpCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Diem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MonHoc.TenMH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SinhVien.HoSV)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Diem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MonHoc.TenMH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SinhVien.HoSV)
+        </td>
+        <td>
+            @Html.ActionLink("NhpEdit", "NhpEdit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("NhpDetails", "NhpDetails", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("NhpDelete", "NhpDelete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
