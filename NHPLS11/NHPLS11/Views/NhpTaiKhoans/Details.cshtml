@@ -1,0 +1,74 @@
+﻿@model NHPLS11.Models.NhpTaiKhoan
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NhpTaiKhoan</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NhpUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhpUserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhpPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhpPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhpFullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhpFullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhpAge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhpAge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhpEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhpEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhpPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhpPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhpStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhpStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NhpId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

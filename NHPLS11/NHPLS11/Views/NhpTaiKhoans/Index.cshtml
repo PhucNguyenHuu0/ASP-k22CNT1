@@ -1,0 +1,69 @@
+﻿@model IEnumerable<NHPLS11.Models.NhpTaiKhoan>
+
+@{
+    ViewBag.Title = "NhpIndex";
+}
+
+<h2>Nhap du lieu</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NhpUserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhpPassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhpFullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhpAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhpEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhpPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhpStatus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhpUserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhpPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhpFullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhpAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhpEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhpPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhpStatus)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NhpId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.NhpId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NhpId })
+        </td>
+    </tr>
+}
+
+</table>
