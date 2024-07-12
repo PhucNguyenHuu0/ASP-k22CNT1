@@ -1,0 +1,26 @@
+﻿@model NHP_OnTapls12.Models.NHP_TACGIA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NHP_TACGIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nhp_TenTacGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nhp_TenTacGia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Nhp_MaTG }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
